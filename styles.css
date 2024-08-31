@@ -1,107 +1,160 @@
-
-
-body{
-    font-family: Arial;
-    margin: 0;
+:root {
+    --color-primary: hsl(99, 50%, 90%);
+    --color-secondary: hsl(99, 50%, 10%);
+    --color-tertiary: hsl(159, 80%, 20%);
+    --color-accent: hsl(39, 80%, 20%);
 }
 
-header{
-    display: flex;
+body {
+    margin:0;
+    background-color: #FEFEFE;
+    background-color: var(--color-primary);
+    width: 100vw;
+    height: auto;
     overflow-x: hidden;
-    position: sticky;
-    z-index: 999;
-    margin-top: 0;
-    width: auto;
-    height: auto; 
+    justify-content: center;
 }
 
-.logo {
-    height: 5rem;
-    width: auto;
-    border-radius: 100%; 
+.bodyText {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 28px;
 }
 
-.navbarright,
-.navbarleft {
-    width: 50vw;
-    padding: 10px;
-    background-color: #333;
-    display: flex;
+.sectionHeader {
+    letter-spacing: 1.5px;
+    font-family: Arial;
+    font-size: 3em;
+}
+.services,
+.meetTheTeam,
+.aboutUs {
+    display:flex;
+    flex-direction: column;
+    padding-left: 26vw;
+    padding-right: 26vw;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+}
+
+.services {
+    padding-bottom:0;
+}
+
+.servicesCards {
+    display:flex;
+    flex-direction: column;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 5vw;
+}
+
+.servicesCards,
+.services{
+    background-color: #d8d8d8;
+}
+
+.meetTheTeam {
+    background-color: #FEFEFE;
+}
+
+.aboutUsContent{
+    margin: 0;
+    display:flex;
+    gap: 5em;
     flex-direction: row;
 }
-.navbarright{
-    justify-content: start;
+
+.topLevelServices {
+    margin: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5vw;
+    margin-top: 50px;
+    height: fit-content;
+}
+.aboutUsImg {
+    width: 200px;
+    height: fit-content;
+    border-radius: 10px;
+    filter:drop-shadow(0 0 2px #F0EAD6);
 }
 
-.navbarleft {
-    justify-content: end;
+.serviceCard:hover {
+    background-color: #c5c5c5;
     
 }
-
-.navbar {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 10px;
-
+.profileImg,
+.serviceImg{
+    width: 200px;
+    height: fit-content;
+    border-radius: 2px;
+    filter:drop-shadow(0 0 2px black);
 }
 
-
-
-.navbtn {
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    padding-left: 100px;
-    padding-right: 30px;
-
-}
-.navbtn.hero {
-    padding-left: 30px;
-  
-}
-
-
-
-
-.profiles{
-    display: flex;
-    justify-content: space-around;
+.serviceCard{
+    padding: 30px;
     background-color: white;
-    margin: 10px;
-    margin-top: 100px;
-    padding: 10px;
-    border-radius: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
 }
 
-.profileimg {
-    height: 5rem;
-    width: auto;
-    border-radius: 50px;
-}
-
-.profile{
-    width: 300px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-    color: #333;
-    padding: 10px;
-    margin: 10px;
-    background-color: #E8E9E8;
-    border-radius: 25px;
-}
-
-h2{
+.cardText {
     font-family: Arial;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-align: center;
 }
 
-.navbar:hover {
-    background-color: #222222;
+.label {
+    font-family: Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.teamCards {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 5vw;
+
+}
+
+.topLevelTeamCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profileCard {
+    background-color: #d8d8d8;
 }
 
 
 
 
 
+
+@media (max-width: 1300px) {
+    .aboutUs {
+        align-items: center;
+    }
+    .aboutUsContent,
+    .topLevelServices {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+
+    .bodyText {
+    }
+}
