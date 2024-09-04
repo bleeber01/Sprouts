@@ -73,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 40vw;
+    padding-bottom: 10vh;
 }
 
 .hooktext {
@@ -122,8 +123,6 @@ body {
     flex-direction: column;
     padding-left: 26vw;
     padding-right: 26vw;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
 }
 
 .meetTheTeam {
@@ -149,7 +148,7 @@ body {
     flex-direction: column;
     padding-left: 20vw;
     padding-right: 20vw;
-    padding-bottom: 30vh;
+    padding-bottom: 10vh;
 }
 
 .servicesCards,
@@ -225,7 +224,8 @@ body {
 .teamCards {
     padding-left: 20vw;
     padding-right: 20vw;
-    padding-bottom: 5vw;
+    padding-bottom: 5vh;
+    
 
 }
 
@@ -241,7 +241,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 5em;
-    padding-bottom: 25vh;
+    padding-bottom: 10vh;
 }
 
 .profileCard {
@@ -260,6 +260,13 @@ body {
 
 .medialink {
     width: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-bottom: 20vh;
 }
 
 
