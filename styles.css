@@ -1,13 +1,18 @@
 :root {
     --color-primary: hsl(99, 50%, 90%);
-    --color-secondary: hsl(99, 50%, 10%);
+    --color-secondary: hsl(99, 76%, 37%);
     --color-tertiary: hsl(159, 80%, 20%);
-    --color-accent: hsl(39, 80%, 20%);
+    --color-accent: hsl(39, 80%, 30%);
+    --color-primarybutton: hsl(99, 50%, 80%);
+    --color-quartenary: hsl(99, 50%, 95%);
+
 
     --color-grayprimary: hsl(240, 3%, 94%);
     --color-graysecondary: hsl(240, 3%, 90%);
-    --color-graytertiary: hsl(240, 3%, 50%);
+    --color-graytertiary: hsl(240, 3%, 30%);
 }
+
+html { scroll-behavior: smooth; }
 
 body {
     margin:0;
@@ -16,6 +21,83 @@ body {
     height: auto;
     overflow-x: hidden;
     justify-content: center;
+}
+
+.logo {
+    width: 4vw;
+    height: auto;
+}
+
+.headerbar {
+    margin: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--color-grayprimary);
+}
+
+.sectionlinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.internallink {
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--color-graytertiary);
+}
+
+.internallink:hover {
+    background-color:var(--color-primarybutton)
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 10em;
+    padding-bottom: 5vh;
+
+}
+
+.hook {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+}
+
+.hooktext {
+    margin-right: 50px;
+}
+
+.htext{
+    color: var(--color-secondary);
+    font-size: 80px;
+}
+
+.htext2 {
+    color: var(--color-accent);
+    font-size: 80px
+}
+
+.hbody {
+    font-size: 25px;
+    font-family: Arial;
+    color: var(--color-graytertiary);
+}
+
+.hookheader{
+    font-family: Arial;
+    font-size: 75px;
 }
 
 .bodyText {
@@ -30,16 +112,25 @@ body {
     letter-spacing: 1.5px;
     font-family: Arial;
     font-size: 3em;
+    padding-top: 10vh;
 }
 .services,
 .meetTheTeam,
-.aboutUs {
+.aboutUs,
+.contact {
     display:flex;
     flex-direction: column;
     padding-left: 26vw;
     padding-right: 26vw;
-    padding-top: 7vw;
-    padding-bottom: 7vw;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.meetTheTeam {
+    padding-bottom: 5vw;
+}
+.aboutUs {
+    padding-bottom: 30vh;
 }
 
 .aboutUsImg {
@@ -58,11 +149,12 @@ body {
     flex-direction: column;
     padding-left: 20vw;
     padding-right: 20vw;
-    padding-bottom: 5vw;
+    padding-bottom: 30vh;
 }
 
 .servicesCards,
-.services{
+.services,
+.contact{
     background-color: var(--color-grayprimary);
 }
 
@@ -149,6 +241,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 5em;
+    padding-bottom: 25vh;
 }
 
 .profileCard {
