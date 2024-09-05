@@ -29,16 +29,21 @@ body {
 }
 
 .headerbar {
-    margin: 0;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    align-items: center;
     display:flex;
+    width: 100vw;
+    padding-left: 5vw;
+    padding-right: 10vw;
+    align-items: center;
     justify-content: space-between;
-    background-color: var(--color-grayprimary);
+    background-image: linear-gradient(hsl(99, 50%, 90%), rgba(0,0,0,0));
+    backdrop-filter: blur(2px);
+    position:absolute;
+    top:0;
+    z-index: 100;
 }
 
 .sectionlinks {
+    padding-right: 10vw;
     display: flex;
     justify-content: space-between;
 }
@@ -66,6 +71,7 @@ body {
     margin-right: 10em;
     margin-top: 10em;
     padding-bottom: 5vh;
+    
 
 }
 
@@ -73,6 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 40vw;
+    padding-bottom: 20vh;
 }
 
 .hooktext {
@@ -122,12 +129,17 @@ body {
     flex-direction: column;
     padding-left: 26vw;
     padding-right: 26vw;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
 }
 
 .meetTheTeam {
-    padding-bottom: 5vw;
+    margin-top:20vh;
+    padding-top: 0;
+    padding-bottom: 2vw;
+}
+.meetTheTeam>.sectionHeader {
+    padding-top: 5vh;
 }
 .aboutUs {
     padding-bottom: 30vh;
@@ -223,44 +235,99 @@ body {
 }
 
 .teamCards {
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
     padding-bottom: 5vw;
 
 }
 
 .profileImg {
-    width: 300px;
+    width: 400px;
     height: fit-content;
     border-radius: 2px;
     resize: horizontal;
 }
 
+
 .topLevelTeamCards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 5em;
+    gap: 100px;
     padding-bottom: 25vh;
+}
+.profileCard>.cardText {
+    text-align: left;
+}
+
+.profileCard>.label {
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .profileCard {
-    max-width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #d8d8d8;
+    align-items: left;
+    background-color: var(--color-grayprimary);
     filter:drop-shadow(0 0 1px black);
+    width: 400px;
 }
 
-.profileCard .cardText {
+.cardText {
     padding-left: 30px;
     padding-right: 30px;
+}
+.labeltext {
+    text-align: left;
+    padding-left: 30px;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-top: 40px;
+    color: var(--color-graytertiary);
 }
 
 .medialink {
     width: 30px;
+    text-decoration: none;
+    padding-left: 30px;
 }
+ul {
+    list-style: none;
+}
+li {
+    margin-bottom: 12px;
+}
+.contactlayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactwrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.contacttext{
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+.contactwrapper>.label {
+    text-align: left;
+}
+
 
 
 @media (max-width: 1300px) {
@@ -294,5 +361,29 @@ body {
     .label {
         margin: 0px;
         padding-top: 20px;
+    }
+
+    .htext,
+    .htext2{
+        font-size: 60px;
+    }
+    .hookheader{
+        font-size: 55px;
+    }
+
+    .hook {
+        max-width: 65vw;
+    }
+    .contactlayout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .contacttext{
+        text-align: left;
+    }
+    .contactwrapper {
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
